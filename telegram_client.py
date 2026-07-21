@@ -75,6 +75,8 @@ class TelegramClient(GObject.Object):
         return asyncio.run_coroutine_threadsafe(_sign(), self._loop)
 
     def is_authorized(self):
+        if os.environ.get("TELEGRAM_BLOCKLIST_DEMO") == "1":
+            return True
         if not self._client or not self._loop:
             return False
         async def _check():
@@ -88,6 +90,17 @@ class TelegramClient(GObject.Object):
 
     def get_blocklist(self):
         async def _get():
+            if os.environ.get("TELEGRAM_BLOCKLIST_DEMO") == "1":
+                await asyncio.sleep(0.3)
+                mock_users = [
+                    {"id": 12345678, "name": "Spam Bot Alpha", "username": "spambot_alpha"},
+                    {"id": 87654321, "name": "Scam Account Beta", "username": "scam_beta"},
+                    {"id": 11223344, "name": "Fake User Test", "username": "test_user_demo"},
+                    {"id": 55667788, "name": "Blocked Channel Example", "username": "bad_channel"},
+                ]
+                self.emit("blocklist-loaded", mock_users)
+                return mock_users
+
             all_users = []
             offset = 0
             limit = 100
