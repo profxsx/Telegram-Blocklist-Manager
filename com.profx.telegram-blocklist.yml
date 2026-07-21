@@ -38,5 +38,5 @@ modules:
       - install -D com.profx.telegram-blocklist.metainfo.xml /app/share/metainfo/com.profx.telegram-blocklist.metainfo.xml
 sources:
   - type: archive
-    url: https://github.com/profxsx/telegram-blocklist/archive/refs/tags/v1.0.0.tar.gz
+    url: https://github.com/profxsx/Telegram-Blocklist-Manager/archive/refs/tags/v1.0.0.tar.gz
     sha256: 31ec657186ce50eb07367a70b83cb2a63ca33b62d0b385b04f618b9899b497d1
