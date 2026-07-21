@@ -1,0 +1,7 @@
+[Desktop Entry]
+Type=Application
+Name=Telegram Blocklist Manager
+Exec=telegram-blocklist
+Icon=com.profx.telegram-blocklist
+Terminal=false
+Categories=Network;Chat;Utility;

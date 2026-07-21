@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop">
+  <id>com.profx.telegram-blocklist</id>
+  <metadata_license>CC0-1.0</metadata_license>
+  <project_license>MIT</project_license>
+  <name>Telegram Blocklist Manager</name>
+  <summary>Manage and clean up your Telegram blocked users list</summary>
+  <description>
+    <p>A native GNOME and Libadwaita application to easily view, search, export, import, and bulk unblock users on Telegram.</p>
+  </description>
+  <launchable type="desktop-id">com.profx.telegram-blocklist.desktop</launchable>
+</component>
