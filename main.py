@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import sys
+import os
 import traceback
 import gi
 
@@ -20,6 +21,11 @@ class BlocklistApp(Adw.Application):
         self._win = None
 
     def on_activate(self, app):
+        if os.environ.get("TELEGRAM_BLOCKLIST_DEMO") == "1":
+            self._client.init_client(12345, "mock_hash")
+            self._show_main_window()
+            return
+
         if self._client.load_config():
             self._client.init_client(
                 self._client.load_config()["api_id"],
