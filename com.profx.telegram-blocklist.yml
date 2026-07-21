@@ -36,6 +36,7 @@ modules:
       - chmod +x /app/bin/telegram-blocklist
       - install -D com.profx.telegram-blocklist.desktop /app/share/applications/com.profx.telegram-blocklist.desktop
       - install -D com.profx.telegram-blocklist.metainfo.xml /app/share/metainfo/com.profx.telegram-blocklist.metainfo.xml
-    sources:
-      - type: dir
-        path: .
+sources:
+  - type: archive
+    url: https://github.com/profxsx/telegram-blocklist/archive/refs/tags/v1.0.0.tar.gz
+    sha256: YOUR_TARBALL_SHA256_CHECKSUM
